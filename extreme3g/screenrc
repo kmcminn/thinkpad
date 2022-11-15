@@ -1,0 +1,22 @@
+# use ctrl+z for the escape command instead of ctrl+a
+escape ^za
+
+# status bar
+hardstatus alwayslastline
+hardstatus string '%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%m/%d %{W}%C%A%{g}]'
+defscrollback 5000
+
+# term color
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce on
+
+# misc improvements
+bind s split
+
+# logging
+logfile flush 1
+logtstamp on
+logtstamp after 5
+logtstamp string "-- screen timestamp %Y-%m-%d %0c:%s --\012"
+deflog on
